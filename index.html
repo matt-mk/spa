@@ -1,11 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="MsgApp">
   <head>
     <meta charset="utf-8">
-    <title>Hello, World!</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>body { font-size: 1.3em; }</style>
+    <title>Expressions and Interpolation</title>
   </head>
+
   <body>
-<h1>Hello, World! I'm Matt</h1>
-<p>I am thrilled about this course</p>
+    <h1>Expressions and Interpolation</h1>
+    <div ng-controller="MsgController">
+      {{name}} has a message for you: <br>
+      {{sayMessage()}}
+      <div>
+        <button ng-click="changeRabbit()">Change Rabbit</button>
+        <br>
+        <img ng-src="rabbit_{{stateOfBeing}}.jpg">
+
+      </div>
+    </div>
+
+<!--
+<body>
+  <h1>Dependency Injection</h1>
+  <div ng-controller="DIController">
+    <input type="text"
+      ng-model="name"
+      ng-blur="upper();">
+  </div>
+-->
+
+<!--
+  <body ng-app="NameCalculator">
+  <h1>Name Calculator</h1>
+  <div ng-controller="NameCalculatorController">
+    <div>
+    Your name:
+    <input type="text"
+      ng-model = "name"
+      ng-keyup="displayNumeric();">
+    </div>
+    <div>Total Numeric value of person's name is:
+      {{totalValue}}</div>
+      {{name}}
+  </div>
+-->
+
+<!--
+  <div ng-controller="myFirstController">
+      {{sayHello()}}
+      <br>
+      {{name}}
+      <br>
+      <input type="text" ng-model="name">
+      <br>
+      Inside my input is: {{name}}
+    </div>
+  -->
   </body>
 </html>
